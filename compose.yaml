@@ -1,0 +1,13 @@
+services:
+  service1:
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - mode: ingress
+        target: 3000
+        published: 3000
+    #environment:
+    #  - IMGFLIP_USERNAME
+    #  - IMGFLIP_PASSWORD
